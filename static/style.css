@@ -1,0 +1,75 @@
+/* Body takes full screen and centers everything */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;       /* dark background */
+    color: #fff;
+    display: flex;
+    justify-content: center;       /* horizontal center */
+    align-items: center;           /* vertical center */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container for form or result */
+form, .result {
+    background-color: #222;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;           /* center all content horizontally */
+}
+
+/* Headings centered */
+form h1, form h2,
+.result h1, .result h2 {
+    color: #ff0000;                /* Stranger Things red */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Name input field aligned left */
+form input[type="text"] {
+    text-align: left;
+}
+
+
+/* Labels and selects */
+label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    background-color: #ff0000;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 30px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #cc0000;
+}

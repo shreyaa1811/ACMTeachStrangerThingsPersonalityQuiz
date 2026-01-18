@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stranger Things Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<form method="POST">
+    <h1>Stranger Things Personality Quiz</h1>
+
+    <label for="name">Name:</label>
+<input type="text" name="name" id="name" required>
+
+
+    {% for question in questions %}
+        {% set i = loop.index0 %}
+        <label>{{ question }}</label>
+        <select name="q{{ loop.index }}" required>
+            <option value="" disabled selected>-- Choose an option --</option>
+            {% for option in mcq_options[i] %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+    {% endfor %}
+
+    <button type="submit" id="submitBtn">Submit</button>
+<div id="loading" style="display:none; color:#ff0000; margin-top:20px;">Calculating your character...</div>
+
+<script>
+const form = document.querySelector('form');
+form.addEventListener('submit', () => {
+    document.getElementById('submitBtn').disabled = true;
+    document.getElementById('loading').style.display = 'block';
+});
+</script>
+
+</form>
+</body>
+</html>

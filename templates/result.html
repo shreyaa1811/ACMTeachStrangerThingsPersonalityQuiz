@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Character</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="result">
+    <h2>Hello {{ name }}!</h2>
+    <h1>You are: {{ character }}</h1>
+    <a href="/"><button>Try Again</button></a>
+</div>
+</body>
+</html>
