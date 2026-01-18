@@ -69,6 +69,8 @@ python app.py
 - See which Stranger Things character matches your answers
 
 ## File Structure
+
+```
 StrangerThingsQuiz/
 ├─ app.py           # Main Flask app
 ├─ db.py            # SQLite database functions
@@ -79,6 +81,7 @@ StrangerThingsQuiz/
 ├─ static/          # CSS, images, JS
 ├─ requirements.txt
 └─ .env             # Environment variables (not in GitHub)
+```
 
 --- 
 
