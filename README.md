@@ -19,8 +19,8 @@ Users answer 10 multiple-choice questions, and the app assigns them a **Stranger
 
 ## Demo
 
-![Entry Page](static/image1.png) 
-![Result Page](static/image2.png)
+![Entry Page](static/images/image1.png) 
+![Result Page](static/images/image2.png)
 
 ---
 

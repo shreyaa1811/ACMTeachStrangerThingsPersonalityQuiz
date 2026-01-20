@@ -13,8 +13,29 @@ client = genai.Client(api_key=API_KEY)
 
 CHARACTERS = [
     "Eleven", "Mike", "Dustin", "Lucas",
-    "Will", "Max", "Steve", "Hopper", "Robin"
+    "Will", "Max", "Steve", "Hopper", "Robin", "Joyce", "Murray", "Vecna",
+    "Erica", "Nancy", "Jonathan", "Eddie"
 ]
+
+CHARACTER_IMAGES = {
+    "Eleven": "static/images/eleven.jpg",
+    "Mike": "static/images/mike.jpg",
+    "Dustin": "static/images/dustin.jpg",
+    "Lucas": "static/images/lucas.jpg",
+    "Will": "static/images/will.jpg",
+    "Max": "static/images/max.jpg",
+    "Steve": "static/images/steve.jpg",
+    "Hopper": "static/images/hopper.jpg",
+    "Robin": "static/images/robin.jpg",
+    "Joyce": "static/images/joyce.jpg",
+    "Nancy":"static/images/nancy.jpg",
+    "Jonathan":"static/images/jonathan.jpg",
+    "Vecna":"static/images/vecna.jpg",
+    "Erica":"static/images/erica.jpg",
+    "Murray":"static/images/murray.jpg",
+    "Eddie": "static/images/eddie.jpg"
+}
+
 
 def get_character(qa_pairs):
     formatted = "\n".join(f"Q: {q}\nA: {a}" for q, a in qa_pairs)

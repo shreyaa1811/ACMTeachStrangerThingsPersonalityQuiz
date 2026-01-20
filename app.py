@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from db import save_attempt
-from gemini import get_character
+from gemini import get_character, CHARACTER_IMAGES  # Import image mapping
 
 app = Flask(__name__)
 
@@ -93,12 +93,20 @@ def index():
         # Call Gemini AI
         character = get_character(qa_pairs)
 
+        # Get image path for the character
+        character_image = CHARACTER_IMAGES.get(character, None)
+
         # Save to database
         save_attempt(name, str([a for _, a in qa_pairs]), character)
 
-        return render_template("result.html", name=name, character=character)
+        return render_template(
+            "result.html",
+            name=name,
+            character=character,
+            character_image=character_image
+        )
 
     return render_template("index.html", questions=QUESTIONS, mcq_options=MCQ_OPTIONS)
 
-if __name__=="__main__" :
+if __name__ == "__main__":
     app.run(debug=True)
